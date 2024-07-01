@@ -5,7 +5,7 @@ from flask import g
 from dotenv import load_dotenv
 #Cargamos las variables de entorno del achivo .env
 load_dotenv()
-#Comfiguro los datos para el uso de la base de datos segun las variables traidas de .env
+#Configuro los datos para el uso de la base de datos segun las variables traidas de .env
 DATABASE_CONFIG={
     'user': os.getenv('DB_USERNAME'),
     'password': os.getenv('DB_PASSWORD'),

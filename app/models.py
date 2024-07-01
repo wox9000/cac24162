@@ -36,7 +36,7 @@ class Usuario:
             self.id_usuario = cursor.lastrowid
         db.commit()
         cursor.close()
-    #Borrar un unusario por si id
+    #Borrar un un usario por si id
     def borrar(self):
         db = get_db()
         cursor = db.cursor()
