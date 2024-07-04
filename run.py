@@ -8,8 +8,7 @@ from flask_cors import CORS
 #Instancia de Flask
 app = Flask(__name__)
 
-#habilito el uso de la conexion a la base de datos
-init_app()
+
 
 # Habilito CORS
 CORS(app)
@@ -21,10 +20,11 @@ app.route('/actualizar_usuario/<int:usuario_id>', methods=['PUT'])(update_usuari
 app.route('/eliminar_usuario/<int:usuario_id>', methods=['DELETE'])(del_usuario)
 app.route('/usuario/<int:usuario_id>', methods=['GET'])(get_usuario)
 app.route('/usuarios/', methods=['GET'])(get_all_usuarios)
+
  
 #permite separa el codigo que se ejecuta al correr el archivo
 if __name__=='__main__':
     app.run(debug=True)
 
-
-
+#habilito el uso de la conexion a la base de datos 
+init_app(app)
